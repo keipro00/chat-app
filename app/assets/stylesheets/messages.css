@@ -12,6 +12,30 @@
   height: 100px;
   /* 幅の調整 */
   padding:0 20px;
+  /* ユーザー名チャット作成ボタン表示 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.header-name a{
+  text-decoration: none;
+  font-size: 16px;
+  color: #FAFAFA;
+}
+
+/* なぜ、headernameのフォントはaタグにつける？ここは親要素？ */
+.create-room{
+  font-size: 10px;
+}
+
+.create-room a{ 
+  padding: 14px;
+  border: 1px solid lightblue ;
+  text-decoration: none;
+  color: deepskyblue;
+  
 }
 
 .side-main{
@@ -19,11 +43,22 @@
   height: calc(100vh - 100px);
   /* 幅の調整 */
   padding:0 20px;
+  /* オーバーフロースクロールって？ */
+  overflow: scroll;
 }
 
 .chat{
   background-color: #FFFFFF;
   width: calc(100% - 300px);
+}
+
+.room{
+  padding:20px 0 40px 20px;
+}
+
+.room-name a{
+  color: white;
+  text-decoration: none;
 }
 
 
