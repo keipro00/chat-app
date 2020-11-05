@@ -1,6 +1,8 @@
 <div class="side-bar-header"> 
   <div class="header-name">
-    <a href="">けいぷろ</a>
+  <%# 記述の読み方 %>
+<%= link_to current_user.name, edit_user_path(current_user) %>
+    <%# <a href="">けいぷろ</a> %>
   </div>
   <div class="create-room">
     <a href="">チャットを作成する</a>
