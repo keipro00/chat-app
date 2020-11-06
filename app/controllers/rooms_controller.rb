@@ -1,8 +1,10 @@
 class RoomsController < ApplicationController
-  def new
-    # インスタンス変数を入れる意味、users_controllerとの違い
-    @room = Room.new
+  def index
   end
+  # def new
+  #   # インスタンス変数を入れる意味、users_controllerとの違い
+  #   @room = Room.new
+  # end
 
   def create
     # binding.pry
@@ -12,7 +14,7 @@ class RoomsController < ApplicationController
     else
       render :new
     end
-end
+  end
 private
 
   def room_params
