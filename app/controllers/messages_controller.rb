@@ -2,16 +2,17 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])
+    @messages = @room.messages.includes(:user)
   end
 
   # この記述の流れの意味
   def create
     @room = Room.find(params[:room_id])
     @message = @room.messages.new(message_params)
-    #条件分岐をいれ、投稿が表示されるように
     if @message.save
       redirect_to room_messages_path(@room)
     else
+      @messages = @room.messages.includes(:user)
       render :index
     end
   end
